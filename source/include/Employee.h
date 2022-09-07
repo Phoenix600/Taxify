@@ -19,19 +19,23 @@ struct Employee
 };
 
 
+
 /// @brief Creates an struct Employee* object or pointer and return it.  
 /// @param struct Employee*
 struct Employee* createEmployeeObject();
 
 
+
 /// @brief Sets the data of the object of type Employee
 /// @param struct struct Employee* E
-void setEmployeeData(struct Employee* E);
+void getEmployeeData(struct Employee* E);
 
 
-/// @brief Calculates the income-tax from the object and assigns the income-tax to the payable_tax var; 
-/// @param struct struct Employee* E 
-void calculateIncomeTax(struct Employee* E);
+
+/// @brief calculateGrossSalary() calculates the Gross Salary of the employee.
+/// @param struct - Employee* E
+void calculateGrossSalary(struct Employee* E);
+
 
 
 /// @brief  displayEmployeeDetails() can be used to display the employee details.
@@ -39,9 +43,22 @@ void calculateIncomeTax(struct Employee* E);
 void displayEmployeeDetails(struct Employee* E);
 
 
-/// @brief calculateGrossSalary() calculates the Gross Salary of the employee.
-/// @param struct Employee* E
-void calculateGrossSalary(struct Employee* E);
+
+/// @brief getEmployeeData() set data of employee object and returns object 
+/// @param int ID  Employee ID 
+/// @param string name  Name of Employee in string format  
+/// @param float baseSalary Basic Salary of the employee
+/// @param float DA Direct Ammount 
+/// @param float HRA Housing Rental Allowance 
+/// @param  float TA Travelling Allowance  
+struct Employee* setEmployeeData(int ID,std::string name,float base_salary,float DA, float HRA, float TA, float incentives);
+
+
+
+/// @brief Calculates the income-tax from the object and assigns the income-tax to the payable_tax var; 
+/// @param struct struct Employee* E 
+void calculateIncomeTax(struct Employee* E);
+
 
 
 #endif 
