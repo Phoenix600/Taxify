@@ -25,24 +25,28 @@ struct Employee
 struct Employee* createEmployeeObject();
 
 
+//  #[x]: Funciton defined 
 
 /// @brief Sets the data of the object of type Employee
 /// @param struct struct Employee* E
 void getEmployeeData(struct Employee* E);
 
 
+// #[x] : Function defined 
 
 /// @brief calculateGrossSalary() calculates the Gross Salary of the employee.
 /// @param struct - Employee* E
 void calculateGrossSalary(struct Employee* E);
 
 
+// #[x] DisplayEmployeeDetails() function is defined 
 
 /// @brief  displayEmployeeDetails() can be used to display the employee details.
 /// @param struct Employee* E
 void displayEmployeeDetails(struct Employee* E);
 
 
+// #[x] define getEmployeeData() i source file 
 
 /// @brief getEmployeeData() set data of employee object and returns object 
 /// @param int ID  Employee ID 
@@ -54,6 +58,7 @@ void displayEmployeeDetails(struct Employee* E);
 struct Employee* setEmployeeData(int ID,std::string name,float base_salary,float DA, float HRA, float TA, float incentives);
 
 
+// [x] calculateIncomeTax() deined in 
 
 /// @brief Calculates the income-tax from the object and assigns the income-tax to the payable_tax var; 
 /// @param struct struct Employee* E 

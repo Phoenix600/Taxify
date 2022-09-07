@@ -64,3 +64,14 @@ void displayEmployeeDetails(struct Employee* E)
     std::cout << "Gross Salary  : " << E->gross_salary << std::endl;
     std::cout << "Payalble Tax  : " << E->payable_tax << std::endl;
 }
+
+
+void calculateGrossSalary(struct Employee* E)
+{
+    E->gross_salary = E->base_salary + E->DA + E->HRA + E->TA + E->incentives;
+}
+
+void calculateIncomeTax(struct Employee* E)
+{
+    
+}
