@@ -37,7 +37,7 @@ struct ReadCSV
     #TODO:
         [x] Create the function which creates the READ CSv FILE obejct 
         [x] Create the function which reads the data from the CSV file
-        [ ] Create the function which outputs the data from the CSV file 
+        [x] Create the function which outputs the data from the CSV file 
         [ ] Create the function which imports data from the CSV file and assigns 
             it to the Struct Employee Type Object. 
 */
@@ -50,6 +50,20 @@ struct ReadCSV* createCSVObject();
 /// @return void
 void readCSV(struct ReadCSV* FILE);
 
+
+
+void getCSVContent(struct ReadCSV* FILE)
+{
+    for(int i=0; i < FILE->content.size(); i++)
+    {
+        for(int j=0; j < FILE->content[i].size(); j++)
+        {
+            cout << FILE->content[i][j] << "\t" << " ";
+        }
+
+        cout << endl;
+    }
+}
 
 
 #endif 

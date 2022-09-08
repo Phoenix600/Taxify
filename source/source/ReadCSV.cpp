@@ -1,6 +1,5 @@
 #include "../include/ReadCSV.h"
 
-
 struct ReadCSV* createCSVObject()
 {
     // Allocating the memory for the ReadCSV Node // Same statement can be implemented with 'new' opertor 
