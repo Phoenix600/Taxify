@@ -58,7 +58,7 @@ void displayEmployeeDetails(struct Employee* E);
 struct Employee* setEmployeeData(int ID,std::string name,float base_salary,float DA, float HRA, float TA, float incentives);
 
 
-// [x] calculateIncomeTax() deined in 
+// [ ] calculateIncomeTax() defined in the Employee.cpp 
 
 /// @brief Calculates the income-tax from the object and assigns the income-tax to the payable_tax var; 
 /// @param struct struct Employee* E 

@@ -39,8 +39,8 @@ void getEmployeeData(struct Employee* E)
 
 struct Employee* setEmployeeData(int ID,std::string name,float base_salary,float DA, float HRA, float TA, float incentives)
 {
-    // #FIXME :  While setting teh data in the Object make sure the memory in heap is allocated for the object  
-    // #FIXED :  if the object is not crearted in heap then, moist likly you'll get the core-segmentation error
+    // #FIXME :  While setting the data in the Object make sure the memory in heap is allocated for the object  
+    // #XXX :  if the object is not crearted in heap then, moist likly you'll get the core-segmentation error
     struct Employee* E = createEmployeeObject();
     E->ID = ID;
     E->name = name;
