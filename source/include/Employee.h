@@ -7,8 +7,8 @@
 /// @brief Employee data structure to represent the real world employee object 
 struct Employee 
 {
-  std::string name;
   long int ID;
+  std::string name;
   float base_salary;
   float DA;
   float HRA;
@@ -16,12 +16,15 @@ struct Employee
   float incentives;
   float gross_salary;
   float payable_tax;
+  float surcharge;
+  float cess;
 };
 
 
 
 /// @brief Creates an struct Employee* object or pointer and return it.  
-/// @param struct Employee*
+/// @param struct Employee* 
+/// @return struct Employee*
 struct Employee* createEmployeeObject();
 
 
@@ -58,12 +61,10 @@ void displayEmployeeDetails(struct Employee* E);
 struct Employee* setEmployeeData(int ID,std::string name,float base_salary,float DA, float HRA, float TA, float incentives);
 
 
-// [ ] calculateIncomeTax() defined in the Employee.cpp 
+// [x] calculateIncomeTax() defined in the Employee.cpp 
 
 /// @brief Calculates the income-tax from the object and assigns the income-tax to the payable_tax var; 
 /// @param struct struct Employee* E 
 void calculateIncomeTax(struct Employee* E);
-
-
 
 #endif 

@@ -73,5 +73,40 @@ void calculateGrossSalary(struct Employee* E)
 
 void calculateIncomeTax(struct Employee* E)
 {
-    
+   calculateGrossSalary(E);
+   
+// Caluclation for the income tax 
+   if(E->gross_salary <= 250000)
+   {
+    E->payable_tax = 0;
+   }
+   else if(E->gross_salary <= 500000)
+   {
+    E->payable_tax = (E->payable_tax - 250000)*(0.05);
+   }
+   else if(E->gross_salary <= 1000000)
+   {
+    E->payable_tax = 12500 + (E->gross_salary - 500000)*0.2;
+   }
+   else {
+    E->payable_tax = 112500 + (E->gross_salary - 1000000)*0.3;
+   }
+
+// Calculation for the surcharge 
+if(E->gross_salary <= 5000000)
+{
+   E->surcharge = 0; 
+}
+else if(E->gross_salary <= 10000000)
+{
+    E->surcharge = E->payable_tax * 0.10;
+}
+else{
+    E->surcharge = E->payable_tax * 0.15;
+}
+
+// Education CESS calculation 
+E->cess = E->payable_tax * 0.03;
+E->payable_tax = E->payable_tax + E->cess + E->surcharge;
+
 }

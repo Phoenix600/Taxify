@@ -1,19 +1,20 @@
 #include<iostream>
 #include "include/Employee.h"
+#include "include/ReadCSV.h"
+#include "include/PersonalData.h"
+
 
 void UnitTestCode()
 {
-  struct Employee* E;
-  E = setEmployeeData(120001,"Pranay Ramteke",1200000,90000,600000,200000,100000);
-  E->gross_salary = 1234;
-  E->payable_tax = 4567;
+  // struct Employee* E = createEmployeeObject();
+  struct Employee* E = setEmployeeData(1211,"Pranay Ramteke",12000000,600000,200000,600000,200000);
+  calculateIncomeTax(E);
   displayEmployeeDetails(E);
+  PrintIncomeTaxSheet(E);
 }
 
 int main()
 {
-  // Unit Test code Added Here 
   UnitTestCode();
-
   return 0;
 }

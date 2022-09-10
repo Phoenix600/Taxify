@@ -30,7 +30,7 @@ struct ReadCSV
     ofstream ou;
     string fname;
     vector<vector<string>> content; // 2-Dimensional vector to read the CSV files in tabular format
-
+    vector<string> CSV_content;
 };
 
 /*
@@ -45,6 +45,8 @@ struct ReadCSV
 /// @param void  Takes no parameter and returns the pointer of type struct ReadCSV*
 struct ReadCSV* createCSVObject();
 
+
+
 /// @brief Reads the CSV file and stores the data in the 2-d vector
 /// @param struct struct ReadCSV* type pointer. 
 /// @return void
@@ -52,18 +54,8 @@ void readCSV(struct ReadCSV* FILE);
 
 
 
-void getCSVContent(struct ReadCSV* FILE)
-{
-    for(int i=0; i < FILE->content.size(); i++)
-    {
-        for(int j=0; j < FILE->content[i].size(); j++)
-        {
-            cout << FILE->content[i][j] << "\t" << " ";
-        }
+void getCSVContent(struct ReadCSV* FILE);
 
-        cout << endl;
-    }
-}
 
 
 #endif 

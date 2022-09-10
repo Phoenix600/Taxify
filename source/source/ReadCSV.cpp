@@ -21,6 +21,7 @@ void readCSV(struct ReadCSV* FILE)
 
     // declare essential variables here 
     string filename = "../data/sample.csv";
+
     vector<string> row;
     string line, word;
     stringstream SS;
@@ -48,3 +49,18 @@ void readCSV(struct ReadCSV* FILE)
     }
 
 }
+
+
+void getCSVContent(struct ReadCSV* FILE)
+{
+    for(int i=0; i < FILE->content.size(); i++)
+    {
+        for(int j=0; j < FILE->content[i].size(); j++)
+        {
+            cout << FILE->content[i][j] << "\t" << " ";
+        }
+
+        cout << endl;
+    }
+}
+
